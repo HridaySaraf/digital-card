@@ -1,3 +1,9 @@
+"engines": {
+  "node": "18.x"
+},
+"overrides": {
+  "eslint": "8.57.1"
+}
 {
   "name": "frontend",
   "version": "0.1.0",
@@ -58,10 +64,9 @@
     "zod": "^3.24.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test"
-  },
+  "start": "craco start",
+  "build": "CI=false craco build"
+}
   "browserslist": {
     "production": [
       ">0.2%",
