@@ -24,13 +24,15 @@ const DigitalCard = () => {
       person: 'Mahadev Printers',
       phone: '+91 9821149384',
       email: 'npprinters@gmail.com',
-      website: 'https://printpure.preview.emergentagent.com/',
-      whatsapp: '919821149384'
+      website: 'printpure.preview.emergentagent.com',
+      whatsapp: '919821149384',
+      address: '250/252 Bazargate Street, Fort Mumbai -400001',
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=250%2F252+Bazargate+Street%2C+Fort%2C+Mumbai+400001'
     },
     social: {
       instagram: 'https://www.instagram.com/mpprinters_fort?igsh=amQ5MG9zNHc4N3Aw'
     },
-    cardUrl: window.location.origin
+    cardUrl: 'https://printpure.preview.emergentagent.com/'
   };
 
   const handleSaveVCard = () => {
@@ -200,6 +202,21 @@ END:VCARD`;
               <div>
                 <p className="text-xs text-gray-500">Email</p>
                 <p className="font-medium">{businessData.contact.email}</p>
+              </div>
+            </a>
+
+            <a 
+              href={businessData.contact.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer group"
+            >
+              <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                <MapPin className="w-5 h-5 text-blue-600" />
+              </div>
+              <div className="text-left">
+                <p className="text-xs text-gray-500">Address</p>
+                <p className="font-medium text-sm">{businessData.contact.address}</p>
               </div>
             </a>
 
